@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physiologic Tooth Movement: An Interactive Oral Histology Module</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','Plus Jakarta Sans','sans-serif']},colors:{
+ink:'#0b1736',navy:'#102451',blue:'#1976d2',cyan:'#20b8d6',ice:'#eef8ff'
+}}}}
+</script>
+<style>
+html{scroll-behavior:smooth}
+body{font-family:Inter,Plus Jakarta Sans,sans-serif;background:#f5faff;color:#102451}
+.hero{background:radial-gradient(circle at 10% 10%,rgba(32,184,214,.22),transparent 28%),linear-gradient(135deg,#081638 0%,#102451 58%,#155d92 100%)}
+.glass{background:rgba(255,255,255,.82);backdrop-filter:blur(14px);border:1px solid rgba(20,91,150,.10)}
+.card{background:#fff;border:1px solid #dbeafe;box-shadow:0 10px 30px rgba(16,36,81,.06);transition:.25s}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 35px rgba(16,36,81,.10);border-color:#9bdcf0}
+.section-title{color:#102451}
+.pill{background:#e8f7fc;color:#08779a;border:1px solid #b9e8f3}
+.timeline-dot{box-shadow:0 0 0 6px #e9f7fb}
+.progress-bar{transition:width .35s ease}
+.answer{transition:.2s}
+.answer.correct{background:#ecfdf5;border-color:#34d399;color:#047857}
+.answer.wrong{background:#fff1f2;border-color:#fb7185;color:#be123c}
+.answer.dim{opacity:.55}
+.fade{animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="hero text-white">
+<nav class="sticky top-0 z-50 bg-[#081638]/85 backdrop-blur-xl border-b border-white/10">
+<div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between gap-5">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center text-xl">🦷</div>
+<div><div class="font-extrabold">Physiologic Tooth Movement</div><div class="text-xs text-cyan-200">Interactive Oral Histology Module</div></div>
+</div>
+<div class="hidden md:flex gap-1 text-sm">
+<a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#roadmap">Roadmap</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#mechanisms">Mechanisms</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#histology">Histology</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#clinical">Clinical</a>
+<a class="px-3 py-2 rounded-lg bg-cyan-400/15 text-cyan-200" href="#quiz">15-Q Quiz</a>
+</div>
+</div></nav>
+<div class="max-w-7xl mx-auto px-5 py-20 md:py-28">
+<div class="max-w-4xl">
+<div class="inline-flex pill rounded-full px-4 py-2 text-xs font-bold tracking-wide mb-5">MSc HISTOLOGY & ORAL PATHOLOGY · DAMASCUS UNIVERSITY</div>
+<h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">Physiologic Tooth Movement:<br><span class="text-cyan-300">An Interactive Oral Histology Module</span></h1>
+<p class="mt-6 text-blue-100 text-lg md:text-xl max-w-3xl leading-relaxed">A focused visual review of eruption, its tissue-level mechanisms, post-eruptive movement, and shedding — designed to accompany a live lecture rather than replace it.</p>
+<div class="mt-8 flex flex-wrap items-center gap-3 text-sm text-blue-100">
+<span class="bg-white/10 rounded-xl px-4 py-2">Hala Awad Aldoss</span>
+<span class="bg-white/10 rounded-xl px-4 py-2">MSc Histology and Oral Pathology</span>
+<span class="bg-white/10 rounded-xl px-4 py-2">Based primarily on Ten Cate’s Oral Histology</span>
+</div>
+</div></div></header>
+
+<main class="max-w-7xl mx-auto px-5 py-12 space-y-16">
+<section id="roadmap">
+<div class="flex items-end justify-between gap-4 mb-7"><div><div class="text-xs font-bold tracking-widest text-cyan-700 uppercase">01 · The big picture</div><h2 class="section-title text-3xl md:text-4xl font-extrabold mt-2">Three phases, one adaptive process</h2></div></div>
+<div class="grid md:grid-cols-3 gap-5">
+<div class="card rounded-3xl p-6"><div class="flex items-center gap-3"><span class="timeline-dot w-9 h-9 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold">1</span><h3 class="font-extrabold text-xl">Pre-eruptive</h3></div><p class="mt-4 text-slate-600 leading-relaxed">Tooth germs change position within the jaws as the jaws grow, helping establish their developing spatial relationships.</p><div class="mt-5 text-xs font-semibold text-cyan-700">KEY IDEA · POSITIONING</div></div>
+<div class="card rounded-3xl p-6"><div class="flex items-center gap-3"><span class="timeline-dot w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">2</span><h3 class="font-extrabold text-xl">Eruptive</h3></div><p class="mt-4 text-slate-600 leading-relaxed">The tooth moves toward the oral cavity while surrounding tissues remodel and an eruption pathway is established.</p><div class="mt-5 text-xs font-semibold text-blue-700">KEY IDEA · ERUPTION</div></div>
+<div class="card rounded-3xl p-6"><div class="flex items-center gap-3"><span class="timeline-dot w-9 h-9 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">3</span><h3 class="font-extrabold text-xl">Post-eruptive</h3></div><p class="mt-4 text-slate-600 leading-relaxed">After reaching occlusion, teeth continue adaptive movement to accommodate jaw growth and compensatory wear.</p><div class="mt-5 text-xs font-semibold text-indigo-700">KEY IDEA · ADAPTATION</div></div>
+</div>
+</section>
+
+<section id="mechanisms">
+<div class="mb-7"><div class="text-xs font-bold tracking-widest text-cyan-700 uppercase">02 · Mechanisms</div><h2 class="section-title text-3xl md:text-4xl font-extrabold mt-2">What actually moves the tooth?</h2><p class="text-slate-600 mt-3 max-w-3xl">Ten Cate presents eruption as a coordinated tissue process. No single mechanism should be treated as the sole “engine” of eruption.</p></div>
+<div class="grid lg:grid-cols-2 gap-7">
+<div class="card rounded-3xl p-6 md:p-8">
+<div class="flex justify-between items-center mb-4"><h3 class="font-extrabold text-2xl">The tissue-remodeling model</h3><span class="pill rounded-full px-3 py-1 text-xs font-bold">INTERACTIVE</span></div>
+<svg viewBox="0 0 640 390" class="w-full rounded-2xl bg-[#f5fbff] border border-sky-100">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1976d2"/></marker></defs>
+<path d="M90 315 Q320 270 550 315 L550 360 L90 360Z" fill="#d9b28c" opacity=".65"/>
+<ellipse cx="320" cy="220" rx="120" ry="115" fill="#dbeafe" stroke="#74c8e8" stroke-width="4"/>
+<path d="M265 255 Q320 280 375 255 L355 120 Q320 75 285 120Z" fill="#fff" stroke="#0f4c81" stroke-width="5"/>
+<path d="M285 120 Q320 75 355 120" fill="none" stroke="#20b8d6" stroke-width="8"/>
+<path d="M255 195 Q320 170 385 195 Q370 275 320 292 Q270 275 255 195Z" fill="none" stroke="#7c3aed" stroke-width="5" stroke-dasharray="8 7"/>
+<path d="M320 72 L320 25" stroke="#1976d2" stroke-width="7" marker-end="url(#arrow)"/>
+<path d="M230 210 L170 175" stroke="#e11d48" stroke-width="5" marker-end="url(#arrow)"/>
+<path d="M410 210 L470 175" stroke="#059669" stroke-width="5" marker-end="url(#arrow)"/>
+<text x="335" y="45" fill="#155d92" font-size="18" font-weight="700">Eruptive direction</text>
+<text x="115" y="165" fill="#be123c" font-size="17" font-weight="700">Bone resorption</text>
+<text x="425" y="165" fill="#047857" font-size="17" font-weight="700">Bone formation</text>
+<text x="335" y="320" fill="#6d28d9" font-size="17" font-weight="700">Dental follicle</text>
+<text x="270" y="210" fill="#0f4c81" font-size="16" font-weight="700">Developing tooth</text>
+</svg>
+<p class="mt-4 text-sm text-slate-600">Simplified teaching diagram — not to scale. It emphasizes the coordinated relationship between the dental follicle, alveolar bone remodeling, and tooth movement.</p>
+</div>
+<div class="space-y-4">
+<div class="card rounded-2xl p-5"><button onclick="reveal('df')" class="w-full text-left"><div class="flex justify-between"><span class="font-extrabold">Dental follicle</span><span class="text-cyan-600 font-bold">+</span></div><p class="text-sm text-slate-500 mt-2">A key signaling/regulatory tissue around the developing tooth.</p></button><div id="df" class="hidden mt-4 pt-4 border-t text-sm text-slate-600 leading-relaxed">The follicle participates in signaling that coordinates bone remodeling around the erupting tooth, including recruitment and differentiation of osteoclast-lineage cells. It should be viewed as a major regulator, not an isolated mechanical “motor.”</div></div>
+<div class="card rounded-2xl p-5"><button onclick="reveal('br')" class="w-full text-left"><div class="flex justify-between"><span class="font-extrabold">Bone remodeling</span><span class="text-cyan-600 font-bold">+</span></div><p class="text-sm text-slate-500 mt-2">Resorption and deposition reshape the pathway and supporting socket.</p></button><div id="br" class="hidden mt-4 pt-4 border-t text-sm text-slate-600 leading-relaxed">Osteoclast recruitment permits bone removal along the eruption pathway, while bone formation occurs in other regions. Eruption therefore involves coupled tissue destruction and formation.</div></div>
+<div class="card rounded-2xl p-5"><button onclick="reveal('pdl')" class="w-full text-left"><div class="flex justify-between"><span class="font-extrabold">Periodontal ligament</span><span class="text-cyan-600 font-bold">+</span></div><p class="text-sm text-slate-500 mt-2">A dynamic supporting tissue that remodels as the tooth changes position.</p></button><div id="pdl" class="hidden mt-4 pt-4 border-t text-sm text-slate-600 leading-relaxed">PDL fibroblasts, collagen turnover, vascularity and tissue remodeling contribute to the changing relationship between tooth and socket. PDL activity is one component of a multifactorial process.</div></div>
+<div class="card rounded-2xl p-5"><button onclick="reveal('root')" class="w-full text-left"><div class="flex justify-between"><span class="font-extrabold">Root formation</span><span class="text-cyan-600 font-bold">+</span></div><p class="text-sm text-slate-500 mt-2">Occurs alongside eruption, but is not a sufficient stand-alone explanation.</p></button><div id="root" class="hidden mt-4 pt-4 border-t text-sm text-slate-600 leading-relaxed">Root formation accompanies the eruptive process, but experimental and developmental evidence supports a broader multifactorial model rather than a simple “root pushes tooth out” mechanism.</div></div>
+</div></div>
+</section>
+
+<section id="histology">
+<div class="mb-7"><div class="text-xs font-bold tracking-widest text-cyan-700 uppercase">03 · Histology lens</div><h2 class="section-title text-3xl md:text-4xl font-extrabold mt-2">Follow the cells</h2></div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+<div class="card rounded-2xl p-5"><div class="text-2xl">🧬</div><h3 class="font-extrabold mt-3">Reduced enamel epithelium</h3><p class="text-sm text-slate-600 mt-2 leading-relaxed">Participates in formation of the eruption pathway and epithelial events around the erupting crown.</p></div>
+<div class="card rounded-2xl p-5"><div class="text-2xl">🦴</div><h3 class="font-extrabold mt-3">Osteoclast lineage</h3><p class="text-sm text-slate-600 mt-2 leading-relaxed">Removes alveolar bone where remodeling is required, allowing a path of reduced resistance.</p></div>
+<div class="card rounded-2xl p-5"><div class="text-2xl">🏗️</div><h3 class="font-extrabold mt-3">Osteoblasts</h3><p class="text-sm text-slate-600 mt-2 leading-relaxed">Build bone in regions undergoing compensatory remodeling and socket adaptation.</p></div>
+<div class="card rounded-2xl p-5"><div class="text-2xl">🧵</div><h3 class="font-extrabold mt-3">PDL fibroblasts</h3><p class="text-sm text-slate-600 mt-2 leading-relaxed">Maintain and remodel collagen-rich PDL while the tooth changes position.</p></div>
+</div>
+<div class="mt-7 card rounded-3xl p-6 md:p-8">
+<h3 class="font-extrabold text-2xl">Molecular coordination — keep it simple</h3>
+<div class="grid md:grid-cols-3 gap-5 mt-5">
+<div class="rounded-2xl bg-sky-50 p-5"><div class="font-bold text-sky-800">Follicular signals</div><p class="text-sm text-slate-600 mt-2">The dental follicle participates in signaling that attracts and supports osteoclast differentiation.</p></div>
+<div class="rounded-2xl bg-blue-50 p-5"><div class="font-bold text-blue-800">CSF-1 / IL-1 pathway</div><p class="text-sm text-slate-600 mt-2">Ten Cate describes signaling involving CSF-1 and IL-1 in the regulation of osteoclast-related events during eruption.</p></div>
+<div class="rounded-2xl bg-indigo-50 p-5"><div class="font-bold text-indigo-800">Path of least resistance</div><p class="text-sm text-slate-600 mt-2">Connective-tissue and bone remodeling help establish a route through which the tooth can erupt.</p></div>
+</div></div>
+</section>
+
+<section id="clinical">
+<div class="mb-7"><div class="text-xs font-bold tracking-widest text-cyan-700 uppercase">04 · Clinical bridge</div><h2 class="section-title text-3xl md:text-4xl font-extrabold mt-2">Why does this matter?</h2></div>
+<div class="grid md:grid-cols-3 gap-5">
+<div class="card rounded-2xl p-6"><span class="pill rounded-full px-3 py-1 text-xs font-bold">ORTHODONTICS</span><h3 class="font-extrabold text-xl mt-4">PDL + bone plasticity</h3><p class="text-sm text-slate-600 mt-2 leading-relaxed">The same remodeling capacity of the PDL and alveolar bone helps explain how controlled orthodontic forces can move teeth.</p></div>
+<div class="card rounded-2xl p-6"><span class="pill rounded-full px-3 py-1 text-xs font-bold">DEVELOPMENT</span><h3 class="font-extrabold text-xl mt-4">Eruption disturbances</h3><p class="text-sm text-slate-600 mt-2 leading-relaxed">Disturbances in the eruption pathway, surrounding tissues, or developmental timing can alter normal eruption.</p></div>
+<div class="card rounded-2xl p-6"><span class="pill rounded-full px-3 py-1 text-xs font-bold">PRIMARY DENTITION</span><h3 class="font-extrabold text-xl mt-4">Shedding</h3><p class="text-sm text-slate-600 mt-2 leading-relaxed">Physiologic exfoliation involves progressive root resorption and weakening of periodontal attachment before loss of the primary tooth.</p></div>
+</div>
+</section>
+
+<section id="quiz" class="rounded-[2rem] bg-[#0e2049] text-white p-6 md:p-10">
+<div class="max-w-4xl mx-auto">
+<div class="flex flex-wrap justify-between items-end gap-5"><div><div class="text-xs font-bold tracking-widest text-cyan-300 uppercase">05 · Knowledge check</div><h2 class="text-3xl md:text-4xl font-extrabold mt-2">15 questions · instant rationale</h2><p class="text-blue-200 mt-2">A lecture review — not a trick exam.</p></div><div class="text-right"><div class="text-xs text-blue-200">Progress</div><div id="qprogress" class="font-extrabold text-xl">0 / 15</div></div></div>
+<div class="mt-5 h-2 bg-white/10 rounded-full overflow-hidden"><div id="bar" class="progress-bar h-full bg-cyan-400" style="width:0%"></div></div>
+<div id="quizbox" class="mt-8"></div>
+<div id="result" class="hidden mt-7 bg-white/10 rounded-2xl p-7 text-center"></div>
+</div></section>
+
+<section class="card rounded-3xl p-7 md:p-9">
+<div class="flex items-start gap-4"><div class="text-3xl">🎯</div><div><h2 class="font-extrabold text-2xl">High-yield take-home points</h2><ul class="mt-4 space-y-3 text-slate-600 leading-relaxed">
+<li><b>1.</b> Physiologic tooth movement is a continuous, coordinated tissue process.</li>
+<li><b>2.</b> Eruption is multifactorial — avoid reducing it to a single “pushing force.”</li>
+<li><b>3.</b> The dental follicle is a major regulatory/signaling tissue for eruption-associated remodeling.</li>
+<li><b>4.</b> Bone resorption and formation occur in coordinated regions around the developing tooth.</li>
+<li><b>5.</b> Post-eruptive movement helps accommodate growth and functional wear.</li>
+<li><b>6.</b> Shedding of primary teeth is associated with progressive root resorption and loss of attachment.</li>
+</ul></div></div>
+</section>
+</main>
+
+<footer class="bg-[#081638] text-blue-200">
+<div class="max-w-7xl mx-auto px-5 py-8 flex flex-col md:flex-row justify-between gap-4 text-sm">
+<div><b class="text-white">Hala Awad Aldoss</b> · MSc Histology and Oral Pathology · Damascus University</div>
+<div>Primary reference: <i>Ten Cate’s Oral Histology</i>, Chapter 10: Physiologic Tooth Movement.</div>
+</div></footer>
+
+<script>
+const questions=[
+{q:"Which sequence best represents the major stages of physiologic tooth movement?",a:["Pre-eruptive → eruptive → post-eruptive","Eruptive → pre-eruptive → post-eruptive","Post-eruptive → eruptive → shedding only","Pre-eruptive → shedding → orthodontic"],c:0,e:"Physiologic tooth movement is classically discussed as pre-eruptive, eruptive, and post-eruptive movement."},
+{q:"What is a major role of the dental follicle during eruption?",a:["It forms enamel after eruption","It participates in signaling that coordinates local tissue remodeling","It acts as the only mechanical force pushing the crown","It prevents osteoclast differentiation"],c:1,e:"The dental follicle is an important regulatory/signaling tissue involved in eruption-associated remodeling and osteoclast recruitment."},
+{q:"Which cells are primarily responsible for bone resorption?",a:["Osteoblasts","Fibroblasts","Osteoclasts","Ameloblasts"],c:2,e:"Osteoclasts are the principal bone-resorbing cells."},
+{q:"Why is bone remodeling important during eruption?",a:["It permanently ankyloses the tooth","It creates and adapts the pathway and supporting bone around the moving tooth","It stops root formation","It replaces enamel"],c:1,e:"Bone removal and deposition alter the local environment as the tooth changes position."},
+{q:"Which statement about root formation and eruption is most accurate?",a:["Root formation alone completely explains eruption","Root formation never occurs during eruption","Root formation accompanies eruption but is not sufficient as a sole explanation","Root formation begins only after the tooth reaches occlusion"],c:2,e:"Root formation occurs alongside eruption, but eruption is considered multifactorial."},
+{q:"Which tissue is especially important in coordinating eruption-related signaling?",a:["Dental follicle","Dentin","Cementum only","Pulp horn"],c:0,e:"The dental follicle is a key regulatory tissue surrounding the developing tooth."},
+{q:"What is one function of the reduced enamel epithelium in eruption?",a:["It forms the PDL fibers directly","It participates in epithelial events and helps establish the eruption pathway","It becomes alveolar bone","It resorbs the entire root"],c:1,e:"The reduced enamel epithelium participates in events that facilitate eruption and the epithelial pathway through the mucosa."},
+{q:"Post-eruptive tooth movement helps compensate for:",a:["Only enamel maturation","Jaw growth and functional tooth wear","Loss of all PDL fibers","Permanent pulp necrosis"],c:1,e:"Post-eruptive movement helps maintain functional relationships as jaws grow and teeth undergo wear."},
+{q:"Mesial drift is most closely associated with:",a:["Maintenance/adaptation of proximal contacts and functional forces","Enamel secretion","Pulp calcification","Root canal infection"],c:0,e:"Mesial drift is an adaptive movement associated with proximal wear, functional forces, and periodontal/alveolar remodeling."},
+{q:"During shedding of primary teeth, the most characteristic tissue event is:",a:["Progressive root resorption","New enamel deposition on the root","Complete pulp regeneration","Permanent ankylosis"],c:0,e:"Physiologic exfoliation is associated with progressive resorption of primary roots."},
+{q:"Which cellular lineage performs the resorptive activity in shedding?",a:["Clastic cells/odontoclast-type cells","Ameloblasts","Odontoblasts","Cementoblasts"],c:0,e:"Clastic cells resorb mineralized dental tissues during physiologic root resorption."},
+{q:"What happens to periodontal attachment during exfoliation?",a:["It becomes permanently stronger","It is progressively reduced","It converts into enamel","It is replaced by dentin"],c:1,e:"As root resorption progresses, periodontal attachment is reduced and the primary tooth becomes increasingly mobile."},
+{q:"Which statement best summarizes eruption mechanics?",a:["A single structure is solely responsible","Eruption involves coordinated formation and destruction/remodeling of tissues","Only root growth matters","Only PDL contraction matters"],c:1,e:"Ten Cate emphasizes a multifactorial process involving tooth-related and surrounding-tissue events."},
+{q:"Which supporting tissues are especially relevant to orthodontic tooth movement?",a:["PDL and alveolar bone","Enamel and pulp only","Salivary glands","Tongue epithelium"],c:0,e:"PDL and alveolar bone are plastic tissues that remodel in response to controlled forces."},
+{q:"What is the best exam-level takeaway?",a:["Eruption is a simple mechanical push","Eruption is a coordinated biologic process involving signaling and tissue remodeling","Eruption ends all tooth movement","Shedding is unrelated to root resorption"],c:1,e:"The most useful conceptual model is multifactorial: signaling, cellular activity, and tissue remodeling work together."}
+];
+let current=0,score=0,answered=0;
+function reveal(id){document.getElementById(id).classList.toggle('hidden')}
+function renderQuestion(){
+ if(current>=questions.length){showResult();return}
+ const q=questions[current];
+ document.getElementById('qprogress').textContent=`${current} / 15`;
+ document.getElementById('bar').style.width=`${(current/15)*100}%`;
+ document.getElementById('quizbox').innerHTML=`<div class="fade bg-white text-[#102451] rounded-3xl p-6 md:p-8"><div class="flex justify-between gap-4"><span class="text-xs font-bold text-cyan-700">QUESTION ${current+1} OF 15</span><span class="text-xs font-bold text-slate-400">Score: ${score}</span></div><h3 class="text-xl md:text-2xl font-extrabold mt-4 leading-snug">${q.q}</h3><div class="grid gap-3 mt-6">${q.a.map((x,i)=>`<button class="answer text-left w-full p-4 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-sky-50" onclick="answer(${i})"><b>${String.fromCharCode(65+i)}.</b> ${x}</button>`).join('')}</div><div id="feedback" class="hidden mt-5 rounded-2xl p-5"></div></div>`;
+}
+function answer(i){
+ const q=questions[current],buttons=document.querySelectorAll('.answer');
+ buttons.forEach((b,j)=>{b.disabled=true;b.classList.add('dim');if(j===q.c)b.classList.add('correct');});
+ const f=document.getElementById('feedback'); f.classList.remove('hidden');
+ if(i===q.c){score++;f.className='mt-5 rounded-2xl p-5 bg-emerald-50 border border-emerald-200 text-emerald-800';f.innerHTML=`<b>Correct ✓</b><p class="mt-2 text-sm">${q.e}</p>`}
+ else{f.className='mt-5 rounded-2xl p-5 bg-rose-50 border border-rose-200 text-rose-800';f.innerHTML=`<b>Not quite.</b><p class="mt-2 text-sm">${q.e}</p>`}
+ answered++;
+ f.innerHTML+=`<button onclick="nextQ()" class="mt-4 px-5 py-2.5 rounded-xl bg-[#102451] text-white font-bold">${current===14?'See my result':'Next question →'}</button>`;
+ document.getElementById('qprogress').textContent=`${current+1} / 15`;
+ document.getElementById('bar').style.width=`${((current+1)/15)*100}%`;
+}
+function nextQ(){current++;renderQuestion()}
+function showResult(){
+ const pct=Math.round(score/15*100);
+ let msg=pct>=87?"Excellent review — you have a strong grasp of the core concepts.":pct>=67?"Good review — revisit the highlighted mechanisms before presenting.":"Worth another pass — focus on the relationship between signaling, remodeling, and eruption.";
+ document.getElementById('quizbox').classList.add('hidden');
+ const r=document.getElementById('result');r.classList.remove('hidden');
+ r.innerHTML=`<div class="text-cyan-300 text-sm font-bold tracking-widest">MODULE COMPLETE</div><div class="text-6xl font-extrabold mt-3">${score}<span class="text-2xl text-blue-200"> / 15</span></div><div class="text-xl font-bold mt-2">${pct}%</div><p class="text-blue-100 mt-3">${msg}</p><button onclick="restart()" class="mt-6 px-5 py-3 rounded-xl bg-cyan-400 text-[#081638] font-extrabold">Restart quiz</button>`;
+}
+function restart(){current=0;score=0;answered=0;document.getElementById('quizbox').classList.remove('hidden');document.getElementById('result').classList.add('hidden');renderQuestion()}
+renderQuestion();
+</script>
+</body></html>
